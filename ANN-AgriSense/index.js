@@ -17,10 +17,7 @@ app.post("/run-r-script", (req, res) => {
 });
 
 // Start the server
-//const PORT = process.env.PORT || 3000;
-// 3000 is the port number (local host)
-
-const PORT = process.env.X_ZOHO_CATALYST_LISTEN_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
