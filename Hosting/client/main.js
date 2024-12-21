@@ -92,6 +92,29 @@ async function getDiseasePrediction(temperature, humidity) {
     }
 }
 
+// async function getDiseasePrediction(temperature, humidity) {
+//     try {
+//         const response = await fetch(`https://appsail-50024113720.development.catalystappsail.in/predict?temperature=${temperature}&humidity=${humidity}`, {
+//             method: 'GET',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             }
+//         });
+
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+
+//         const data = await response.json();
+//         console.log('Prediction:', data);
+//         return data;
+//     } catch (error) {
+//         console.error('Error fetching disease prediction:', error);
+//         throw error;
+//     }
+// }
+
+
 async function updateForeCastInfo(city) {
     const forcastData = await fetchData("forecast", city);
 
